@@ -7,13 +7,13 @@ Nice to meet you! I'm a software developer working in VFX technology. I spend my
 I'm intrested in VFX and gaming industry, especially in Graphics programming. The math behind rendering each frame (pixels and voxels) excites me and keeps me curious to learn more.
 Before moving into software development, I worked on the creative side of VFX, animating 3D characters. That experience helps me understand the creaive vision behind projects, making me better at designing technical systems that support creative teams.
 
-## I Geek out on...
+## I Geek out about...
 - Managing memory efficiently
 - SIMD (speeeeeeed matters over everything!!)
 - Game Engines (especially their architectures and the performance they squeeze out)
 - Prince of Persia which was written entirely in assembly.
 
-## Nightmares for me?
+## What keeps me up at night? (Nightmares...)
 - My program running slower
 - My least favourite is the Memory leaks (the silent types)
 
@@ -25,11 +25,11 @@ Before moving into software development, I worked on the creative side of VFX, a
 #### (May 2025 - Present)
 
 > - <h3>Implemented a backend service to maintain realtime sync between the various production management systems in-house. </h3>
->   We were dealing with multiple in-house production management systems to make the pipeline experience better for the artists. This demanded a real time sync of information accross all the PMS systems, publishes being tracked from the artists side and pushed over to the production and status updates, new ingested shots, feedbacks from the creative supervisors and production to the artists. <br>
+>   We were dealing with multiple in-house production management systems to make the pipeline experience better for the artists. This demanded a real time sync of information accross all the PMS systems, publishes being tracked from the artists side and pushed over to the production and status updates, new ingested shots, feedbacks from the creative supervisors and production to the artists. <br><br>
 > - <h3>Prototyped a custom Hair Shading Model in Unreal.</h3>
 >   Provided a prototype for a solution that was being discussed to target a look required for a specific show. <br>
 >   One of the noted problems with unreal engine's original hair shading model was that even with specular field set to 0, it still has a bit of highlight across other lobes. To tackle this, created another hair shading model based off (copy of) the existing hair shading model but with custom data enabled and also by updating the existing shader to work with additional input of Specular Strength and push that via the GBuffer to be used as a multiplier to the existing Specular value, this gave fine grain control from the UE material graph to the creatives who want to tinker around with it and set the overall look. <br>
->   Not only this was challenging, but at the same time helped me get a few more insights of how the shading in Unreal Engine works. <br>
+>   Not only this was challenging, but at the same time helped me get a few more insights of how the shading in Unreal Engine works. <br><br>
 > - <h3>Implemented a Content plugin Caching system in Unreal for seamless workflows while publishing/updated through perforce</h3>
 >   One of the other problems that I was able to deal with was with Unreal's asset locking, which means if unreal has an asset open (in Windows) it's locked and cannot be updated. <br>
 >   The use case for the team was to publish and retrive the updated assets which were pushed into perforce for the various content plugins used across the shows, since Unreal locks entities being used, hence the publish process had to wait for everyone to close their unreal sessions for a fair amount of time till the publish/update process is finished. This bottleneck was solved with a simple yet meaningful approach of having reading mirror for the artists in Unreal for the content plugins. Next to the published content plugins, we added a cached clone of the existing content plugins. This allowd the artists to seamlessly work in unreal without having to worry about the publishes and updates happening to the content plugins. It is when the resources are idle, the backend service aspect of this system syncs the updates to the cached plugins directory so that the artists can continue to get the latest of the plugins, with just a minor restart on Unreal.
@@ -39,11 +39,11 @@ Before moving into software development, I worked on the creative side of VFX, a
 #### (July 2023 - February 2025)
 
 > - <h3>Developed an end-to-end updated rendering architecture for streamlining the compositing render workflow. </h3>
->   This system was based on the nuke dcc's render commandline and was coupled with the Pixar's tractor engine to provide a farm based rendering solution for the team. The system also had the option to render locally via a custom Queue mechanism with a dedicated user interface, which tracked the render and release processes and also gave the users flexibility to stop a process or retry in case the process failed. <br>
+>   This system was based on the nuke dcc's render commandline and was coupled with the Pixar's tractor engine to provide a farm based rendering solution for the team. The system also had the option to render locally via a custom Queue mechanism with a dedicated user interface, which tracked the render and release processes and also gave the users flexibility to stop a process or retry in case the process failed. <br><br>
 > - <h3>Played a part in the overall upgrade towards latest VFX platforms (2022 and 2024)</h3>
->   As a studio, the team wanted to use the latest and greatest of DCCs, Nuke being one of them. <br>The main problem to tackle before moving to the updated VFX reference platform was to ensure all of the required dependencies of the Nuke stack is all compliant with the requirements, and them being python 3, OpenEXR 3.x and updated Qt version compatibility. The first migration to CY 2022 platform was relatively difficult than the second migration for CY 2024 platform as the former one needed to ensure all dependent projects are python 3 migrated and also OpenEXR 3.x compatible. Being part of the lager effort and contributing to many different projects helped me gain a wider insight around many other departments' workflows.<br>
+>   As a studio, the team wanted to use the latest and greatest of DCCs, Nuke being one of them. <br>The main problem to tackle before moving to the updated VFX reference platform was to ensure all of the required dependencies of the Nuke stack is all compliant with the requirements, and them being python 3, OpenEXR 3.x and updated Qt version compatibility. The first migration to CY 2022 platform was relatively difficult than the second migration for CY 2024 platform as the former one needed to ensure all dependent projects are python 3 migrated and also OpenEXR 3.x compatible. Being part of the lager effort and contributing to many different projects helped me gain a wider insight around many other departments' workflows.<br><br>
 > - <h3>Initial prototyping for Node based Visual scripting system and extending Meshroom as a Platform to support visual scripting</h3>
->   Visual programming is one of the aspects which intrigues everyone, including the creatives. <br>This was driven by an agenda to describe and configure workflows for shows in a way that's managed through visual node graph. This allows the creatives to have more control over the workflows without having to worry about programming knowledge for config files.<br>I was involved in the early protyping of the workflow to demonstrate the feasibility of the approach and also help decide the platform on which the visual scripting should happen.<br>There were many platforms explored for this, e.g Houdini PDG, Alicevision Meshroom, Inbibo Shift and few other thirdparty applications. In the end, the decision was to go with Meshroom. Having done the initial POC, I moved to the Meshroom development as the platform for the Node based workflow system, targeted for the BU technical directors to create and provide nodes and creative supervisors to configure workflows.<br>
+>   Visual programming is one of the aspects which intrigues everyone, including the creatives. <br>This was driven by an agenda to describe and configure workflows for shows in a way that's managed through visual node graph. This allows the creatives to have more control over the workflows without having to worry about programming knowledge for config files.<br>I was involved in the early protyping of the workflow to demonstrate the feasibility of the approach and also help decide the platform on which the visual scripting should happen.<br>There were many platforms explored for this, e.g Houdini PDG, Alicevision Meshroom, Inbibo Shift and few other thirdparty applications. In the end, the decision was to go with Meshroom. Having done the initial POC, I moved to the Meshroom development as the platform for the Node based workflow system, targeted for the BU technical directors to create and provide nodes and creative supervisors to configure workflows.<br><br>
 > - <h3>Developing and Integrating Compositing templating to the Render System</h3>
 >   Was involved in developing a templating system for compositing in Nuke which allows a base template to be created and setup for a show and released. This template then becomes available to be gathered in any context that supports the provided asset names regex, once gathered in Nuke, the asset resolver would find assets with the provided name regex for the current/provided context and resolve the template to released asset and automate the creation of the first version of the slap comp. This was also coupled with the render workflow (as described above) to allow the creatives to create a slap-comp on the fly without even having to open Nuke and do a QC in the in-house Review system. My contributions on this project included the asset resolver backend and the integration with the Rendering architecture. This system had a full-fledged front end UI for Gathering and Release templates at the Show or Sequence level to make them available to all of the child contexts.
 
@@ -92,19 +92,24 @@ I spend my time building tools, pipelines and systems to make the creative workf
 
 
 ## Tech I work with
-#### VFX & Creative Tools
-    - Nuke, Maya, ShotGrid.
-    - Recently started exploring Unreal Engine universe too.
-#### Frameworks & Libraries
-    - Quite decent in working with Qt, OpenGL.
-    - Familiar with OpenImageIO and have worked on its uses in a few places.
-    - Recently exploring FFmpeg as well.
-#### Workflow Tools
-    - Docker
+|<h4>VFX & Creative Tools </h4>                         |
+|-------------------------------------------------------|
+|Nuke, Maya, ShotGrid.                                  |
+|Recently started exploring Unreal Engine universe too. |
+
+|<h4>Frameworks & Libraries </h4>                                       |
+|-----------------------------------------------------------------------|
+|Quite decent in working with Qt, OpenGL.                               |
+|Familiar with OpenImageIO and have worked on its uses in a few places. |
+|Recently exploring FFmpeg as well.                                     |
+
+|<h4>Workflow Tools </h4>|
+|------------------------|
+|Docker                  |
 
 
 ### On the Programming side
-- I'm quite decent in working with C++ and Python,
+- I'm quite decent in working with C++ and Python.
 - Have some experience and familiarity with QML and Javascript.
 
 
